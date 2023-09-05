@@ -53,7 +53,7 @@ def send_weather_update():
     send_text_message(weather_info)
 
 def main():
-    schedule.every().day.at("13:00").do(send_weather_update)
+    schedule.every().day.at("08:00").do(send_weather_update)
     while True:
         schedule.run_pending()
         time.sleep(1)
